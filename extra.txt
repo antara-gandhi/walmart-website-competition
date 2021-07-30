@@ -1,0 +1,12 @@
+<div class="scan-benefits"
+          <summary>hello</summary>
+          <ul>
+            <li> Contact-less shopping </li>
+            <li> Quicker transactions </li>
+            <li> Skip the line </li> 
+            <li> Spend more time doing the things you love </li>
+          </ul>
+          </div>
+
+
+          

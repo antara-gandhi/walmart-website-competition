@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Which smart assistant is best for you</title>
+    <link href="quiz.css" rel="stylesheet" type="text/css" />
+  </head>
+
+
+<body>
+  <div id="main">
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a class="active" href="quiz.html">Take Our Quiz!</a>
+      </div>
+  <div id="header">
+    <h1>Which smart assistant is best for you?</h1>
+    <h3><b>New!</b> We have personalized smart assistants to fit all your needs. Whether you are a strong-willed parent, a busy college teen, or somewhere in between - you can find familiarity in one of our all new smart assistant personas!</h3>
+    <p>By taking this quiz and downloading the Walmart Mobile App, you can enter to win a $1,000 Walmart gift card! <a  href="https://apps.apple.com/us/app/walmart-shopping-grocery/id338137227?pid=walmart.com&c=SandG_LP_iOS&is_retargeting=true">Download on the App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.walmart.android&pid=walmart.com&c=SandG_LP_AND&is_retargeting=true">get it on Google Play</a> today!</p>
+  </div>
+
+  <form  id="form1">
+  <p>When you go shopping, you usually...</p>
+  <label><input type="radio" name="one" id="young" value="1" />Go alone. Shopping is me time!</label>
+  <label><input type="radio" name="one" id="mid" value="2" />Take along my kids, just for fun</label>
+  <label><input type="radio" name="one" id="old" value="3" />Go with my friends even if we aren't looking to buy something</label>
+
+  <p>How long do your shopping trips usually last?</p>
+  <label><input type="radio" name="length" id="party" value="1" />A half hour on a slow day</label>
+  <label><input type="radio" name="length" id="rock" value="2" />Definetly an hour or more!</label>
+  <label><input type="radio"  name="length" id="beer" value="3" />I lose track of all time!</label>
+
+  <p>What do you usually shop for?</p>
+  <label><input type="radio" name="item" id="rock2" value="1" />Groceries</label>
+  <label><input type="radio" name="item" id="indie" value="2" />A mix of everything</label>
+  <label><input type="radio" name="item" id="mix" value="3" />Clothes</label>
+  
+
+  <p>What are your shopping goals?</p>
+  <label><input type="radio" name="goals" id="faster" value="1" />Getting in and out faster</label>
+  <label><input type="radio" name="goals" id="specific" value="2" />Finding exactly what I'm looking for</label>
+  <label><input type="radio" name="goals" id="deals" value="3" />Getting the best deals</label>
+  
+
+  <button type="submit" value="Submit">Submit</button>
+
+  </form>
+
+  <p id="answer"></p>
+  <p id="answer2"></p>
+  </div>
+
+
+  <script>
+      document.getElementById("form1").onsubmit=function() {
+      
+      
+      one = parseInt(document.querySelector('input[name = "one"]:checked').value);  
+      
+      length = parseInt(document.querySelector('input[name = "length"]:checked').value);
+      
+      item = parseInt(document.querySelector('input[name = "item"]:checked').value);
+
+      goals = parseInt(document.querySelector('input[name = "goals"]:checked').value);
+      
+      total= one + length + item + goals;
+      
+      
+      //document.getElementById("answer").innerHTML = total;	   
+
+      if(total < 6) {
+  document.getElementById("answer2").innerHTML = "You got Whelma. She is as independent as she as strong. Her main features include being able to give an optimal shopping route based on your grocery list and a biometric handle that tracks your vitals as you shop.";
+  }
+
+    if(total >=6 && total < 10) {
+  document.getElementById("answer2").innerHTML = "You got Wheely. As the original, you are dependeble and loyal. Wheely's best features for you are the scan as you shop, and a slower auto self-driving speed for when you need to slow down and take a deep breath. Relax! Wheely's got your back.";
+  }
+    
+    if(total >=10) {
+  document.getElementById("answer2").innerHTML = "You got Cookie. Cookie is, well, one smart Cookie! You probably love to peruse and find out what you need when you see it, but that doesn't mean you don't want convinience. Cookie allows you to pay whenever you're done, without waiting in lines. Plus, take your cart out to your car and, when you're all done, press the All Set button, and Cookie knows to go straight to the nearest cart holder!";
+  }   
+      
+      return false; 
+      }
+  </script>
+
+</body>
+</html>
+	
+
